@@ -61,6 +61,16 @@
     }
 }
 
-.box4 {
-    animation: box4 5s infinite;
+.rotate {
+    animation: rotate 5s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(-20deg);
+    }
 }
