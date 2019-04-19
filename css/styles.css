@@ -1,6 +1,7 @@
 .scale {
     width: 30px;
-    height: 30px;;
+    height: 30px;
+    float: right;
 
     /*increases the width 10 times, height 2 
     transform: scale(10, 2);*/
@@ -13,6 +14,53 @@
    /* transform: scaleX (-5); */
 
     /* flips the y-axis*/
-    transform: scale(1, -5);
+    /*transform: scale(1, -5);*/
    /* transform: scaleY(-5);*/
+}
+
+.box {
+    background: gray;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin: 20px;
+}
+
+
+.skew-20 {
+    transform: skewX(20deg);
+}
+
+.skew-neg-20 {
+   /*transform: skewX(-20deg);*/
+   animation: skew-h 3s infinite;
+   animation-direction: alternate;
+}
+
+.skew-neg-50 {
+    /*transform: skewX(20deg);*/
+    animation: skew-y 3s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes skew-h {
+    0% {
+        transform: skewX(20deg);
+    }
+    100% {
+        transform: skewX(-20deg);
+    }
+}
+
+@keyframes skew-y {
+    0% {
+        transform: skewY(20deg);
+    }
+    100% {
+        transform: skewY(-20deg);
+    }
+}
+
+.box4 {
+    animation: box4 5s infinite;
 }
