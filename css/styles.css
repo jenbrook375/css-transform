@@ -31,16 +31,12 @@
     transform: skewX(20deg);
 }
 
+
+/* skews 2nd box's height 20/-20deg on the x-axis*/
 .skew-neg-20 {
    /*transform: skewX(-20deg);*/
    animation: skew-h 3s infinite;
    animation-direction: alternate;
-}
-
-.skew-neg-50 {
-    /*transform: skewX(20deg);*/
-    animation: skew-y 3s infinite;
-    animation-direction: alternate;
 }
 
 @keyframes skew-h {
@@ -52,6 +48,13 @@
     }
 }
 
+/* skews the 3rd box 20/-20deg on the y-axis */
+.skew-neg-50 {
+    /*transform: skewX(20deg);*/
+    animation: skew-y 3s infinite;
+    animation-direction: alternate;
+}
+
 @keyframes skew-y {
     0% {
         transform: skewY(20deg);
@@ -61,6 +64,7 @@
     }
 }
 
+/* rotates 4th box 360 deg */
 .rotate {
     animation: rotate 5s infinite;
     animation-direction: alternate;
@@ -70,7 +74,17 @@
     0% {
         transform: rotate(360deg);
     }
-    /*100% {
-        transform: rotate(-20deg);
-    }*/
 }
+
+/* moves 5th box down 52px and to the right 65px */
+.translate {
+    position: absolute;
+    animation: translate ease-in-out 5s infinite;
+}
+
+@keyframes translate {
+    50% {
+        transform: translate(65px, 52px) translateZ(0); 
+    }
+}
+
